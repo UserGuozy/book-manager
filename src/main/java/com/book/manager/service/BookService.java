@@ -57,7 +57,9 @@ public class BookService {
      * @return 图书详情
      */
     public BookOut findBookById(Integer id) {
+        //调用bookRepository根据ID查询方法
         Optional<Book> optional = bookRepository.findById(id);
+        //如果存在就chu li
         if (optional.isPresent()) {
             Book book = optional.get();
             BookOut out = new BookOut();
